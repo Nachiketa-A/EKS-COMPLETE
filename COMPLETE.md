@@ -1,4 +1,4 @@
-# Step 1. 
+# Step 1. Creation of user for EKS and Instance for Jenkins
 
 # 1. First Create a user in AWS IAM with any name
 To set up an EKS (Amazon Elastic Kubernetes Service) account without using the root account, it's indeed a best practice to create a new IAM (Identity and Access Management) user with limited access. Here's a step-by-step guide to creating an IAM user and attaching the necessary policies, including creating a custom policy.
