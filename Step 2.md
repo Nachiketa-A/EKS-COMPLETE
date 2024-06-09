@@ -16,6 +16,8 @@ After connecting to your EC2 instance using MobaXterm, you can execute the follo
 
 3. **Install AWS CLI**
 
+
+
    - Install the `unzip` package to handle zip files:
      ```bash
      sudo apt install unzip
@@ -131,6 +133,35 @@ To check it is configure or not
 ---
 
 # 3. Install kubectl
+
+Sure, here are the step-by-step instructions to install `kubectl` on a Linux machine:
+
+1. **Download `kubectl`:**
+   Use `curl` to download the `kubectl` binary from the Amazon EKS S3 bucket. You can do this by running the following command in your terminal:
+   ```bash
+   curl -o kubectl https://amazon-eks.s3.us-west-2.amazonaws.com/1.19.6/2021-01-05/bin/linux/amd64/kubectl
+   ```
+
+2. **Make the downloaded file executable:**
+   After downloading `kubectl`, you need to make it executable using the `chmod` command:
+   ```bash
+   chmod +x ./kubectl
+   ```
+
+3. **Move `kubectl` to a directory in your PATH:**
+   Now, move the `kubectl` binary to a directory that is included in your system's PATH environment variable. This ensures that you can run `kubectl` from any location in your terminal:
+   ```bash
+   sudo mv ./kubectl /usr/local/bin
+   ```
+
+4. **Verify the installation:**
+   To confirm that `kubectl` has been installed correctly, you can check its version by running:
+   ```bash
+   kubectl version --short --client
+   ```
+   This command will print the client version of `kubectl`.
+
+After completing these steps, `kubectl` should be successfully installed on your Linux machine, and you can start using it to interact with Kubernetes clusters. If you encounter any issues during the installation process, feel free to ask for further assistance!
 
 ![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/1a8c6dc7-3337-4c82-9212-407ec2d3fb13)
 
