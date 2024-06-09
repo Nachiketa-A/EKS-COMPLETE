@@ -1,4 +1,4 @@
-# Step2. Installation and Configuration of AWS CLI, Kubectl, Eksctl
+# Step 2. Installation and Configuration of AWS CLI, Kubectl, Eksctl
 
 After connecting to your EC2 instance using MobaXterm, you can execute the following commands to update the package lists, install AWS CLI, and configure it. Here's a detailed step-by-step guide:
 
@@ -191,14 +191,28 @@ After completing these steps, `eksctl` should be successfully installed on your 
 
 # 5. Creation of EKS Cluster
 
-Creation of EKS Cluster
 
+### Creation of EKS Cluster
+```
 eksctl create cluster --name=my-eks92 \
                       --region=us-east-1 \
                       --zones=us-east-1a,us-east-1b \
                       --version=1.30 \
                       --without-nodegroup
 
+```
+
+1. `--name=my-eks92`: Specifies the name of the EKS cluster to be created. In this case, the cluster will be named "my-eks92".
+
+2. `--region=us-east-1`: Specifies the AWS region in which the EKS cluster will be created. In this case, the region is "us-east-1", which corresponds to the US East (N. Virginia) region.
+
+3. `--zones=us-east-1a,us-east-1b`: Specifies the availability zones within the chosen region where the EKS cluster's worker nodes will be deployed. Availability zones are distinct locations within a region that are engineered to be isolated from failures in other zones. Here, the cluster will use availability zones "us-east-1a" and "us-east-1b".
+
+4. `--version=1.30`: Specifies the Kubernetes version for the EKS cluster. In this case, the cluster will be created with Kubernetes version 1.30.
+
+5. `--without-nodegroup`: Indicates that no managed node group should be created along with the cluster. In Amazon EKS, a node group is a managed group of Amazon EC2 instances that are deployed to run Kubernetes pods. By using `--without-nodegroup`, you are instructing `eksctl` not to create any node group during the cluster creation process. You'll have to add one later manually or through another `eksctl` command.
+
+Executing this command will create an Amazon EKS cluster named "my-eks92" in the "us-east-1" region, spanning availability zones "us-east-1a" and "us-east-1b", with Kubernetes version 1.30, and without creating any node group. You'll have an empty cluster ready to deploy applications once you add node groups to it.
 
 
 ![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/ccb0417d-fda9-43fd-a89d-c808ec2fdee0)
