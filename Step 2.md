@@ -192,7 +192,7 @@ After completing these steps, `eksctl` should be successfully installed on your 
 # 5. Creation of EKS Cluster
 
 
-### Creation of EKS Cluster
+### A. Creation of EKS Cluster
 ```
 eksctl create cluster --name=my-eks92 \
                       --region=us-east-1 \
@@ -221,10 +221,46 @@ Executing this command will create an Amazon EKS cluster named "my-eks92" in the
 
 After execution of EKS Cluster command
 
-To setup worker node
+### b. To setup worker node
+The `eksctl utils associate-iam-oidc-provider` command associates the IAM OIDC (OpenID Connect) provider for your Amazon EKS cluster with your AWS account. This association enables Kubernetes service accounts in your cluster to utilize AWS IAM roles for fine-grained access control to AWS services and resources.
+``
+eksctl utils associate-iam-oidc-provider \
+    --region ap-south-1 \
+    --cluster my-eks22 \
+    --approve
+
+```
+
+Here's what each option in the command does:
+
+- `--region ap-south-1`: Specifies the AWS region where your EKS cluster is located. In this case, it's the Asia Pacific (Mumbai) region (`ap-south-1`).
+- `--cluster my-eks22`: Specifies the name of your EKS cluster. Replace `my-eks22` with the actual name of your cluster.
+- `--approve`: Confirms the action without requiring any further confirmation from the user.
+
+By running this command, you're granting permission for your EKS cluster to communicate with AWS IAM (Identity and Access Management) using OIDC. This allows Kubernetes service accounts within your cluster to assume IAM roles and access AWS resources securely.
+
+After running this command, your EKS cluster will be associated with the IAM OIDC provider, and Kubernetes service accounts in the cluster can start assuming IAM roles for accessing AWS services.
 
 ![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/86429c03-ab6a-4bd6-a187-7b9cb9848f29)
 
+### c. eksctl create nodegroup
+
+eksctl create nodegroup --cluster=my-eks22 \
+                       --region=ap-south-1 \
+                       --name=node2 \
+                       --node-type=t3.medium \
+                       --nodes=3 \
+                       --nodes-min=2 \
+                       --nodes-max=4 \
+                       --node-volume-size=20 \
+                       --ssh-access \
+                       --ssh-public-key=Key \
+                       --managed \
+                       --asg-access \
+                       --external-dns-access \
+                       --full-ecr-access \
+                       --appmesh-access \
+                       --alb-ingress-access
 
 ![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/0370218a-6a6d-4bbb-9615-9af8a116f2a9)
 
