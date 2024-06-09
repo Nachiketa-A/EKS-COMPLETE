@@ -1,6 +1,6 @@
+# Step 4 Create Service Account, Role & Assign that role, And create a secret for Service Account and geenrate a Token
 
-
-### To check the status of a worker node in a cluster (commonly in environments like Kubernetes, Hadoop, or other distributed systems)
+## To check the status of a worker node in a cluster (commonly in environments like Kubernetes, Hadoop, or other distributed systems)
 
 In Kubernetes, you can use `kubectl` to check the status of worker nodes.
 
@@ -12,7 +12,7 @@ This command will list all nodes with their status. Look for the `STATUS` column
 
 ![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/92480573-56e2-403a-a5f9-01787fc738d9)
 
-### To modify the security group settings for an Amazon EKS (Elastic Kubernetes Service) cluster to allow all inbound traffic between master and worker nodes, you can follow these steps:
+## Open INBOUND TRAFFIC IN ADDITIONAL Security Group
 
 ### Step-by-Step Guide
 
@@ -47,5 +47,28 @@ This command will list all nodes with their status. Look for the `STATUS` column
 8. **Save the Rule:**
    - Click `Save rules` to apply the changes.
 
-### Creation of Pipelines 
+To check the status of the resources in your Kubernetes cluster, you typically use the `kubectl get` command with specific resource types. If you're looking for names or status of different resources, here are some common commands:
 
+### Check All Resources in a Namespace
+
+```bash
+kubectl get all -n <namespace>
+```
+
+This command will list all resources (pods, services, deployments, etc.) in the specified namespace.
+
+![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/6e994428-42e2-4232-9eb6-088447054c32)
+
+Creating a namespace in Kubernetes is a straightforward task that can be accomplished using the `kubectl` command-line tool. Below are the steps and commands to create a new namespace:
+
+### Using `kubectl create namespace`
+
+The simplest way to create a namespace is by using the `kubectl create namespace` command.
+
+```bash
+kubectl create namespace <namespace-name>
+```
+
+Replace `<namespace-name>` with the desired name for your namespace.
+
+![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/51af6b0d-bee2-46ee-b19b-c2890d668d47)
