@@ -64,27 +64,32 @@ Credentials of jenkins
 
 # 3. Installation of sonarqube using Docker
 
-**installation of sonarqube**
+To set up SonarQube using Docker, you can follow these steps:
 
-installation of docker
-
+1. **Install Docker:**
+   If Docker is not already installed on your system, you can install it using the following command:
+   ```bash
+   sudo apt install docker.io
+   ```
 ![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/50bb3fa6-e5fc-4768-8003-284f7eef0f5e)
 
-command to access all docker permissions
-
+2. **Change Permissions (Optional):**
+   It's not recommended to change permissions on system files like `docker.sock`. Docker commands typically require sudo privileges or being a member of the docker group. However, if you want to grant more permissive permissions, you can use the following command (though it's not recommended):
+   ```bash
+   sudo chmod 777 /var/run/docker.sock
+   ```
 ![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/813b4e0c-b8b7-4a4d-8f84-91db780dadad)
 
-Command to set up sonarqube
-
+3. **Pull and Run SonarQube Container:**
+   Now, you can pull and run the SonarQube Docker container. There is a minor correction in your command. It should be:
+   ```bash
+   docker run -d -p 9000:9000 sonarqube:lts-community
+   ```
 ![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/dc5e970e-986b-4862-83d2-12f0a3ac1475)
 
--d : Detached mode (it will run the logs in background)
+   This command will download the SonarQube Community Edition Docker image (`sonarqube:lts-community`) and run it in detached mode (`-d`). It exposes port 9000 of the container to port 9000 on the host (`-p 9000:9000`), allowing you to access SonarQube from your browser.
 
--p : mention te port range
-
-eg: 9000:9001 (9000 is a host port ; 9001 is  container port)
-
-lts: latest versuion of sonarqube image
+After executing these steps, SonarQube should be running and accessible at `http://localhost:9000`. You can then configure it according to your needs and start analyzing code.
 
 command to check container is created or not
 
