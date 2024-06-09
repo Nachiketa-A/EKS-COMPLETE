@@ -241,4 +241,27 @@ Certainly! Here are the detailed steps for configuring Docker and SonarQube Scan
 
 4. **Save the Credential:**
    - Click `OK` to save the credential.
+  
+To complete the configuration of SonarQube in Jenkins, follow these steps to set up the SonarQube server:
+
+1. **Navigate to Manage Jenkins:**
+   - Open your Jenkins dashboard.
+   - Click on `Manage Jenkins` from the left-hand side menu.
+
+2. **Configure SonarQube Installation:**
+   - In the "Manage Jenkins" section, look for "Configure System" and click on it.
+   - Scroll down to the "SonarQube servers" section.
+
+3. **Add SonarQube Server:**
+   - Click on `Add SonarQube` to create a new SonarQube server configuration.
+   - Fill in the details for the SonarQube server:
+     - **Name:** Enter `Sonar` (or any name you prefer).
+     - **Server URL:** Enter the URL of your SonarQube server, e.g., `http://xxxxx:9000`.
+
+4. **Configure Server Authentication Token:**
+   - Under "Server authentication token," click `Add`.
+   - Select the credential you previously added (with ID `sonar-token`).
+
+5. **Save the Configuration:**
+   - Scroll down and click `Apply` and then `Save` to save the changes.
 
