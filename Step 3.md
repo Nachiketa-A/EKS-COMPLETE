@@ -152,12 +152,3 @@ After installing these plugins, you'll have the necessary tools integrated into 
 
 
 
-
-
-
-
-
-
-
-
-![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/1504417b-6bec-4e60-a323-b902809979ab)
