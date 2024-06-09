@@ -226,3 +226,86 @@ This YAML defines a Role resource in Kubernetes RBAC (Role-Based Access Control)
   
   - **verbs**: Specifies the actions allowed on the listed resources. The actions include `get`, `list`, `watch`, `create`, `update`, `patch`, and `delete`.
 
+
+steps to create a Role using the `vi` editor and then applying it using `kubectl`:
+
+### Step-by-Step Instructions
+
+1. **Open `vi` editor to create a new file:**
+
+   ```bash
+   vi rol.yml
+   ```
+
+2. **Add the Role definition to the file:**
+
+   Press `i` to enter insert mode and paste the following content:
+
+   ```yaml
+   apiVersion: rbac.authorization.k8s.io/v1
+   kind: Role
+   metadata:
+     name: app-role
+     namespace: webapps
+   rules:
+     - apiGroups:
+         - ""
+         - apps
+         - autoscaling
+         - batch
+         - extensions
+         - policy
+         - rbac.authorization.k8s.io
+       resources:
+         - pods
+         - secrets
+         - componentstatuses
+         - configmaps
+         - daemonsets
+         - deployments
+         - events
+         - endpoints
+         - horizontalpodautoscalers
+         - ingress
+         - jobs
+         - limitranges
+         - namespaces
+         - nodes
+         - persistentvolumes
+         - persistentvolumeclaims
+         - resourcequotas
+         - replicasets
+         - replicationcontrollers
+         - serviceaccounts
+         - services
+       verbs: ["get", "list", "watch", "create", "update", "patch", "delete"]
+   ```
+
+3. **Save and exit the `vi` editor:**
+
+   - Press `Esc` to exit insert mode.
+   - Type `:wq` and press `Enter` to save and quit `vi`.
+
+4. **Apply the YAML file to create the Role:**
+
+   ```bash
+   kubectl apply -f rol.yml
+   ```
+
+### Verification
+
+To verify that the Role has been created successfully, list the roles in the `webapps` namespace:
+
+```bash
+kubectl get roles -n webapps
+```
+
+#### Example output:
+
+```
+NAME       CREATED AT
+app-role   2024-06-10T08:30:00Z
+```
+
+This output confirms that the `app-role` has been created in the `webapps` namespace.
+
