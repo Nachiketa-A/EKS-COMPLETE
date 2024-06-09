@@ -135,7 +135,9 @@ To set up an EKS (Amazon Elastic Kubernetes Service) account without using the r
      - The key pair file (`.pem`) will be automatically downloaded. Keep this file safe, as you will need it to SSH into your instance.
 
 6. **Network settings**
-   - Keep the default settings for now unless you have specific VPC and subnet requirements.
+ 
+![image](https://github.com/Nachiketa-A/EKS-COMPLETE/assets/157089767/685912be-d083-4858-9355-1e26de533cdc)
+
 
 7. **Configure storage**
    - Change the **Size (GiB)** to `30` for the root volume.
