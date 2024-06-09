@@ -29,6 +29,7 @@ The application consists of 11 separate services (or microservices), each writte
 Each of these services is like a small, independent piece of the overall application. They work together to create the full shopping experience for users but can be developed, deployed, and scaled independently.
 
 
-Step 1 :- 
+# Step 1 :- 
+
 1. First Create a user in AWS IAM 
 2. Creating an EC2 instance for Jenkins using the AWS Management Console
