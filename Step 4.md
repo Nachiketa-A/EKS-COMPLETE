@@ -163,3 +163,66 @@ jenkins   1         1m
 
 This output confirms that the `jenkins` `ServiceAccount` has been created in the `webapps` namespace.
 
+# 3. Create a Role
+```
+
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: app-role
+  namespace: webapps
+rules:
+  - apiGroups:
+        - ""
+        - apps
+        - autoscaling
+        - batch
+        - extensions
+        - policy
+        - rbac.authorization.k8s.io
+    resources:
+      - pods
+      - secrets
+      - componentstatuses
+      - configmaps
+      - daemonsets
+      - deployments
+      - events
+      - endpoints
+      - horizontalpodautoscalers
+      - ingress
+      - jobs
+      - limitranges
+      - namespaces
+      - nodes
+      - pods
+      - persistentvolumes
+      - persistentvolumeclaims
+      - resourcequotas
+      - replicasets
+      - replicationcontrollers
+      - serviceaccounts
+      - services
+    verbs: ["get", "list", "watch", "create", "update", "patch", "delete"]
+```
+
+This YAML defines a Role resource in Kubernetes RBAC (Role-Based Access Control). 
+
+- **apiVersion**: Specifies the version of the Kubernetes API that you are using for this object. In this case, it's `rbac.authorization.k8s.io/v1`, indicating Kubernetes RBAC API version 1.
+
+- **kind**: Defines the type of Kubernetes resource you are creating. Here, it's a `Role`.
+
+- **metadata**: Provides standard metadata about the object, such as its name and namespace.
+
+  - **name**: Sets the name of the Role as `app-role`.
+  
+  - **namespace**: Specifies the namespace in which the Role will be created. In this case, it's `webapps`.
+
+- **rules**: Defines the permissions associated with this Role. The `rules` section specifies the resources and the corresponding verbs allowed for those resources.
+
+  - **apiGroups**: Indicates the API groups for which these rules apply. In this case, it includes an empty string `""` (core API group) and several other groups like `apps`, `autoscaling`, `batch`, etc.
+  
+  - **resources**: Lists the Kubernetes resources that these rules apply to. It includes a wide range of resources like `pods`, `secrets`, `deployments`, etc.
+  
+  - **verbs**: Specifies the actions allowed on the listed resources. The actions include `get`, `list`, `watch`, `create`, `update`, `patch`, and `delete`.
+
