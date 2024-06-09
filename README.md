@@ -31,5 +31,5 @@ Each of these services is like a small, independent piece of the overall applica
 
 ## [Step 1. Creation of user for EKS and Instance for Jenkins](https://github.com/Nachiketa-A/EKS-COMPLETE/blob/main/Step%201.md)
 
-1. First Create a user in AWS IAM 
-2. Creating an EC2 instance for Jenkins using the AWS Management Console
+[1. First Create a user in AWS IAM](https://github.com/Nachiketa-A/EKS-COMPLETE/blob/main/Step%201.md#1-first-create-a-user-in-aws-iam-with-any-name)
+[2. Creating an EC2 instance for Jenkins using the AWS Management Console](https://github.com/Nachiketa-A/EKS-COMPLETE/blob/main/Step%201.md#2-creating-an-ec2-instance-for-jenkins-using-the-aws-management-console)
