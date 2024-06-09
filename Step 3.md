@@ -1,5 +1,7 @@
 # 
 
+# 1. Install OpenJDK 17
+
 1 . **Install OpenJDK 17 Headless:**
    OpenJDK is an open-source implementation of the Java Platform. The "headless" version means it doesn't include graphical user interface (GUI) libraries.
    ```bash
@@ -13,7 +15,7 @@
    ```
 ![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/8df7e31e-3d27-461e-a45d-e5051a324c92)
 
-**installation oif jenkins**
+# 2. Installing Jenkins from the Jenkins Debian repository with the GPG key
 
 ![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/f2537ec8-1009-472e-83cb-930844a2b5ba)
 
