@@ -1,7 +1,16 @@
 # 
 
-First step **Installation of Java**
+1 . **Install OpenJDK 17 Headless:**
+   OpenJDK is an open-source implementation of the Java Platform. The "headless" version means it doesn't include graphical user interface (GUI) libraries.
+   ```bash
+   sudo apt install openjdk-17-jdk-headless
+   ```
 
+2. **Verify Installation:**
+   After the installation is complete, you can verify that Java 17 is installed by checking the version:
+   ```bash
+   java -version
+   ```
 ![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/8df7e31e-3d27-461e-a45d-e5051a324c92)
 
 **installation oif jenkins**
