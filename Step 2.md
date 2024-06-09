@@ -191,29 +191,27 @@ After completing these steps, `eksctl` should be successfully installed on your 
 
 # 5. Creation of EKS Cluster
 
-A. Create cluster
+Creation of EKS Cluster
 
-```
-
-eksctl create cluster --name=my-eks924 \
-                      --region=ap-south-1 \
-                      --zones=ap-south-1a,ap-south-1b \
+eksctl create cluster --name=my-eks92 \
+                      --region=us-east-1 \
+                      --zones=us-east-1a,us-east-1b \
                       --version=1.30 \
                       --without-nodegroup
-```
-
-1. `--name=my-eks924`: This option specifies the name of the Amazon EKS cluster you want to create. In this case, the cluster will be named "my-eks924".
-
-2. `--region=ap-south-1`: This option specifies the AWS region in which the EKS cluster will be created. In this case, the region is "ap-south-1", which corresponds to the Asia Pacific (Mumbai) region.
-
-3. `--zones=ap-south-1a,ap-south-1b`: This option specifies the availability zones within the chosen region where the EKS cluster's worker nodes will be deployed. Availability zones are distinct locations within a region that are engineered to be isolated from failures in other zones. Here, the cluster will use availability zones "ap-south-1a" and "ap-south-1b".
-
-4. `--version=1.30`: This option specifies the Kubernetes version for the EKS cluster. In this case, the cluster will be created with Kubernetes version 1.30.
-
-5. `--without-nodegroup`: This option indicates that no managed node group should be created along with the cluster. In Amazon EKS, a node group is a managed group of Amazon EC2 instances that are deployed to run Kubernetes pods. By using `--without-nodegroup`, you are instructing `eksctl` not to create any node group during the cluster creation process. You'll have to add one later manually or through another `eksctl` command.
-
-By running this command, `eksctl` will create an Amazon EKS cluster named "my-eks924" in the "ap-south-1" region, spanning availability zones "ap-south-1a" and "ap-south-1b", with Kubernetes version 1.30, and without creating any node group. You'll have an empty cluster ready to deploy applications once you add node groups to it.
 
 
-![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/8d29171d-c89e-40eb-a181-19facdd34a3a)
+
+![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/ccb0417d-fda9-43fd-a89d-c808ec2fdee0)
+
+
+
+After execution of EKS Cluster command
+
+To setup worker node
+
+![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/86429c03-ab6a-4bd6-a187-7b9cb9848f29)
+
+
+![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/0370218a-6a6d-4bbb-9615-9af8a116f2a9)
+
 
