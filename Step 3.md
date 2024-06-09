@@ -64,6 +64,8 @@ Credentials of jenkins
 
 # 3. Installation of sonarqube using Docker
 
+**installation of sonarqube**
+
 installation of docker
 
 ![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/50bb3fa6-e5fc-4768-8003-284f7eef0f5e)
@@ -93,5 +95,49 @@ To access sonarqube copy te public ip address and open it on port 9000
 ![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/2733db19-184d-45f1-84c2-fc6da25cd2d7)
 
 sonarqube credentials
+
+![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/1504417b-6bec-4e60-a323-b902809979ab)
+
+
+After execution of EKS Cluster command
+
+To setup worker node
+
+![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/86429c03-ab6a-4bd6-a187-7b9cb9848f29)
+
+
+![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/0370218a-6a6d-4bbb-9615-9af8a116f2a9)
+
+
+Meanwhhile we will manage jenkins
+
+**Steps**
+
+Go to **manage Jenkins**
+
+click **Plugins**
+
+click on **Available Plugins**
+
+![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/3f4e1429-937c-4781-b105-195126bb875a)
+
+For docker Plugins
+
+![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/0cd60108-c6ec-4fcb-93ac-f91aea392a2d)
+
+For kubernetes plugins
+
+![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/238cdf38-0b7e-44f9-a78b-8d6b6bcf6820)
+
+Click **Install**
+
+
+
+
+
+
+
+
+
 
 ![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/1504417b-6bec-4e60-a323-b902809979ab)
