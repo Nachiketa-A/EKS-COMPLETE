@@ -150,52 +150,54 @@ After installing these plugins, you'll have the necessary tools integrated into 
 ![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/238cdf38-0b7e-44f9-a78b-8d6b6bcf6820)
 
 
-# Configuration 
+# Configuration of Tools
 
-To configure Jenkins with Docker and SonarQube Scanner, follow these steps:
+Certainly! Here are the detailed steps for configuring Docker and SonarQube Scanner tools in Jenkins:
 
-1. **Manage Jenkins:**
-   - Navigate to your Jenkins dashboard.
-   - Click on "Manage Jenkins" from the left-hand side menu.
+### Configure Docker in Jenkins
 
-2. **Install Docker:**
-   - Click on "Tools".
-   - Look for an option to manage tool installations. It might be labeled as "Global Tool Configuration" or similar.
-   - Find the section for Docker and Docker versions.
-   - Add the latest Docker version by specifying its name and selecting the "Latest" version if available. Make sure you have Docker installed on the Jenkins server for this step to work correctly.
+1. **Navigate to Manage Jenkins:**
+   - From your Jenkins dashboard, click on "Manage Jenkins" from the left-hand side menu.
+
+2. **Open Global Tool Configuration:**
+   - Click on "Global Tool Configuration" under the "System Configuration" section.
+
+3. **Configure Docker:**
+   - Scroll down to find the "Docker installations" section.
+   - Click on "Add Docker" to create a new Docker configuration.
+
+4. **Set Docker Configuration:**
+   - In the newly added Docker configuration:
+     - **Name:** Enter "docker" (or any name you prefer).
+     - **Install automatically:** Check the box to enable automatic installation.
+     - **Add Installer:** Click on "Add Installer" and choose "Install from Docker".
+     - **Docker Version:** Select "Latest" from the dropdown menu.
 ![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/ac8543a0-43ff-46d0-9cb8-ed709b976c69)
 
-3. **SonarQube Scanner:**
-   - Still in the "Manage Jenkins" section, look for a similar tool configuration option.
-   - Find the section for SonarQube Scanner.
-   - Add a new SonarQube Scanner configuration by giving it a name, such as "sonar-scanner".
-   - Check the box to "Install automatically" if available.
-   - Specify the desired version, such as "6.0.xx".
+### Configure SonarQube Scanner in Jenkins
+
+1. **Navigate to Manage Jenkins:**
+   - From your Jenkins dashboard, click on "Manage Jenkins" from the left-hand side menu.
+
+2. **Open Global Tool Configuration:**
+   - Click on "Global Tool Configuration" under the "System Configuration" section.
+
+3. **Configure SonarQube Scanner:**
+   - Scroll down to find the "SonarQube Scanner" section.
+   - Click on "Add SonarQube Scanner" to create a new SonarQube Scanner configuration.
+
+4. **Set SonarQube Scanner Configuration:**
+   - In the newly added SonarQube Scanner configuration:
+     - **Name:** Enter "sonar-scanner" (or any name you prefer).
+     - **Install automatically:** Check the box to enable automatic installation.
+     - **Add Installer:** Click on "Add Installer" and choose "Install from Maven Central".
+     - **SonarQube Scanner Version:** Enter "6.0.xx" (replace "xx" with the actual minor version if needed).
+
+
+
 ![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/89de3cc7-9b21-4bda-949d-05a3adaed0c4)
 
-4. **Save Configuration:**
-   - After adding Docker and SonarQube Scanner configurations, make sure to save the changes.
 
-These steps should enable Jenkins to use Docker and SonarQube Scanner in your pipeline jobs. Make sure that Docker is properly installed on the Jenkins server, and SonarQube Scanner is accessible. Adjust the configuration as needed based on your Jenkins setup and requirements.
-
-
-To configure Sonarqube server
-
-Go to Sonarqube -> Administartion -> security -> users -> token
-
-![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/a79251d0-f192-402d-81a3-014e0fcde940)
-
-Copy token 
-
-Go to Jenkins -> manage jenkins -> credentials-> system -> global credentials -> add credentials
-
-![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/c5730c06-d3f1-4f0d-b591-53c83e519e71)
-
-To add sonarqube server to the jenkins
-
-MAnage jenkins -> system
-
-![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/1e992fd4-0079-4102-8f2e-27273acd4926)
-
-
+5. **Save the Configuration:**
+   - Once you've configured both Docker and SonarQube Scanner, scroll down and click "Save" to apply the changes.
 
