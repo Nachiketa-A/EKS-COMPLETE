@@ -47,3 +47,11 @@ Each of these services is like a small, independent piece of the overall applica
 2. [Installing Jenkins from the Jenkins Debian repository with the GPG key](https://github.com/Nachiketa-A/EKS-COMPLETE/blob/main/Step%203.md#2-installing-jenkins-from-the-jenkins-debian-repository-with-the-gpg-key)
 3. [Installation of sonarqube using Docker](https://github.com/Nachiketa-A/EKS-COMPLETE/blob/main/Step%203.md#installing-the-mentioned-plugins-in-jenkins)
 4. [Installing the mentioned plugins in Jenkins](https://github.com/Nachiketa-A/EKS-COMPLETE/blob/main/Step%203.md#installing-the-mentioned-plugins-in-jenkins)
+
+## [Step 4 Create Service Account, Role & Assign that role, And create a secret for Service Account and geenrate a Token]
+
+1. [Open INBOUND TRAFFIC IN ADDITIONAL Security Group]
+2. [Creating Service Account]
+3. [Create a Role]
+4. [Bind the role to service account]
+5. [To create a token for service account use below yaml file]
