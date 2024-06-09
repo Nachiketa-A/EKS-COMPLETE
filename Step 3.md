@@ -104,27 +104,52 @@ Now, To access sonarqube copy te public ip address and open it on port 9000
 ![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/1504417b-6bec-4e60-a323-b902809979ab)
 
 
-Meanwhhile we will manage jenkins
+# Installing the mentioned plugins in Jenkins:
 
-**Steps**
+1. **SonarQube Scanner Plugin:**
+   - Navigate to "Manage Jenkins" > "Manage Plugins" > "Available" tab.
+   - Search for "SonarQube Scanner".
+   - Check the checkbox next to the "SonarQube Scanner" plugin.
+   - Click "Install without restart".
 
-Go to **manage Jenkins**
+2. **Docker Plugin:**
+   - Go to "Manage Jenkins" > "Manage Plugins" > "Available" tab.
+   - Search for "Docker".
+   - Check the checkbox next to the "Docker Pipeline" plugin.
+   - Click "Install without restart".
 
-click **Plugins**
+3. **Docker Pipeline Plugin:**
+   - Follow the same steps as for the Docker plugin, searching for "Docker Pipeline" instead.
 
-click on **Available Plugins**
+4. **Docker Build Step Plugin:**
+   - Similar to the previous steps, search for "Docker Build Step".
+   - Check the checkbox next to the plugin.
+   - Click "Install without restart".
 
-![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/3f4e1429-937c-4781-b105-195126bb875a)
+5. **Kubernetes Plugin:**
+   - Search for "Kubernetes".
+   - Check the checkbox next to the "Kubernetes CLI" plugin.
+   - Click "Install without restart".
 
-For docker Plugins
+6. **CodeBees Docker Build and Publish Plugin:**
+   - Search for "CodeBees Docker Build and Publish".
+   - Check the checkbox next to the plugin.
+   - Click "Install without restart".
+
+7. **Kubernetes CLI Plugin:**
+   - Search for "Kubernetes CLI".
+   - Check the checkbox next to the plugin.
+   - Click "Install without restart".
+
+After installing these plugins, you'll have the necessary tools integrated into Jenkins for managing Docker containers, building Docker images, scanning code with SonarQube, and working with Kubernetes. You can configure and use them in your Jenkins pipelines as needed.![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/3f4e1429-937c-4781-b105-195126bb875a)
+
 
 ![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/0cd60108-c6ec-4fcb-93ac-f91aea392a2d)
 
-For kubernetes plugins
 
 ![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/238cdf38-0b7e-44f9-a78b-8d6b6bcf6820)
 
-Click **Install**
+
 
 
 
