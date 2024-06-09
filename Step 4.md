@@ -309,3 +309,118 @@ app-role   2024-06-10T08:30:00Z
 
 This output confirms that the `app-role` has been created in the `webapps` namespace.
 
+# 4. Bind the role to service account
+
+```
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: app-rolebinding
+  namespace: webapps 
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: app-role 
+subjects:
+- namespace: webapps 
+  kind: ServiceAccount
+  name: jenkins
+```
+
+This YAML file defines a RoleBinding resource in Kubernetes RBAC (Role-Based Access Control). Let's break down the components:
+
+```yaml
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: app-rolebinding
+  namespace: webapps
+```
+
+### Explanation
+
+- **apiVersion**: Specifies the version of the Kubernetes API that you are using for this object. Here, it's `rbac.authorization.k8s.io/v1`, indicating Kubernetes RBAC API version 1.
+
+- **kind**: Defines the type of Kubernetes resource you are creating. In this case, it's a `RoleBinding`.
+
+- **metadata**: Provides standard metadata about the object, such as its name and namespace.
+
+  - **name**: Sets the name of the RoleBinding as `app-rolebinding`.
+  
+  - **namespace**: Specifies the namespace in which the RoleBinding will be created. In this case, it's `webapps`.
+
+```yaml
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: app-role
+```
+
+- **roleRef**: Specifies the role to bind to the subjects.
+
+  - **apiGroup**: Indicates the API group for the role. Here, it's `rbac.authorization.k8s.io`.
+  
+  - **kind**: Defines the kind of resource to bind the role to. In this case, it's a `Role`.
+  
+  - **name**: Specifies the name of the Role to bind. Here, it's `app-role`.
+
+```yaml
+subjects:
+- namespace: webapps
+  kind: ServiceAccount
+  name: jenkins
+```
+
+- **subjects**: Specifies the entities to which the role will be bound.
+
+  - **namespace**: Indicates the namespace of the subject. Here, it's `webapps`.
+  
+  - **kind**: Specifies the type of the subject. In this case, it's a `ServiceAccount`.
+  
+  - **name**: Sets the name of the ServiceAccount to bind. Here, it's `jenkins`.
+
+### Summary
+
+This RoleBinding (`app-rolebinding`) binds the Role (`app-role`) to the ServiceAccount (`jenkins`) within the `webapps` namespace. It essentially grants the permissions defined in the Role to the ServiceAccount, allowing it to perform actions on the specified resources within the namespace.
+
+### Instructions to Apply
+
+To apply this YAML file and create the RoleBinding:
+
+1. **Open `vi` editor and create the YAML file:**
+
+   ```bash
+   vi bind.yml
+   ```
+
+2. **Add the RoleBinding definition to the file:**
+
+   Press `i` to enter insert mode and paste the YAML content.
+
+3. **Save and exit the `vi` editor:**
+
+   - Press `Esc` to exit insert mode.
+   - Type `:wq` and press `Enter` to save and quit `vi`.
+
+4. **Apply the YAML file:**
+
+   ```bash
+   kubectl apply -f bind.yml
+   ```
+
+### Verification
+
+To verify that the RoleBinding has been created successfully, list the RoleBindings in the `webapps` namespace:
+
+```bash
+kubectl get rolebindings -n webapps
+```
+
+#### Example output:
+
+```
+NAME            ROLE            AGE
+app-rolebinding app-role        1m
+```
+
+This output confirms that the `app-rolebinding` has been created in the `webapps` namespace and is binding the `app-role` to the `jenkins` ServiceAccount.
