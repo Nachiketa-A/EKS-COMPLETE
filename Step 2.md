@@ -1,6 +1,6 @@
 After connecting to your EC2 instance using MobaXterm, you can execute the following commands to update the package lists, install AWS CLI, and configure it. Here's a detailed step-by-step guide:
 
-### 1. Installation of AWS CLI
+# 1. Installation of AWS CLI
 
 1. **Connect to Your EC2 Instance Using MobaXterm**
    - Open MobaXterm.
@@ -61,7 +61,7 @@ sudo ./aws/install
 
 By following these steps, you will have successfully installed and configured AWS CLI on your EC2 instance
 
-### 2. Create access keys for your IAM user and configure the AWS
+# 2. Create access keys for your IAM user and configure the AWS
 
 ### Step-by-Step Guide
 
@@ -121,23 +121,16 @@ Now that you have your Access Key ID and Secret Access Key, you can configure th
      - **Default output format**: Enter your desired format (e.g., `json`).
 
 
-
-
-
-
-
-
-Write the region name according to your region
-and keep default output format as blank
-
 ![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/d903af9a-559f-4fb0-8778-39ca310f68ca)
 
 To check it is configure or not 
 
 ![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/7c54d45f-74ef-47c3-a84a-fe69aae89ac2)
 
+---
+---
 
-Command to install kubectl
+# 3. Install kubectl
 
 ![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/1a8c6dc7-3337-4c82-9212-407ec2d3fb13)
 
