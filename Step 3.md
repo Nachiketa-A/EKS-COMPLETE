@@ -1,4 +1,4 @@
-# 
+# Step 3. Configuration of Jenkins
 
 # 1. Install OpenJDK 17
 
