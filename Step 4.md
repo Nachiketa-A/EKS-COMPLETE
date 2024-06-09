@@ -12,7 +12,7 @@ This command will list all nodes with their status. Look for the `STATUS` column
 
 ![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/92480573-56e2-403a-a5f9-01787fc738d9)
 
-## Open INBOUND TRAFFIC IN ADDITIONAL Security Group
+# 1. Open INBOUND TRAFFIC IN ADDITIONAL Security Group
 
 ### Step-by-Step Guide
 
@@ -72,3 +72,94 @@ kubectl create namespace <namespace-name>
 Replace `<namespace-name>` with the desired name for your namespace.
 
 ![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/51af6b0d-bee2-46ee-b19b-c2890d668d47)
+
+# 2. Creating Service Account
+
+```yaml
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: jenkins
+  namespace: webapps
+```
+
+### Breakdown of the YAML File
+
+#### `apiVersion: v1`
+- **Explanation:** This specifies the version of the Kubernetes API that you are using to create this object. `v1` is a stable version of the API that includes core resources such as `ServiceAccount`.
+
+#### `kind: ServiceAccount`
+- **Explanation:** This specifies the type of Kubernetes object you are creating. In this case, it is a `ServiceAccount`.
+
+#### `metadata`
+- **Explanation:** The `metadata` section provides standard information about the object, such as its name, namespace, labels, and annotations.
+
+##### `name: jenkins`
+- **Explanation:** This sets the name of the `ServiceAccount`. Here, the name is `jenkins`.
+
+##### `namespace: webapps`
+- **Explanation:** This specifies the namespace in which the `ServiceAccount` will be created. A namespace in Kubernetes is a way to divide cluster resources between multiple users (via resource quota). In this case, the `ServiceAccount` will be created in the `webapps` namespace.
+
+### Purpose of a ServiceAccount
+
+A `ServiceAccount` in Kubernetes is used to provide an identity to pods running in a cluster. When a pod runs in the cluster, it can use this `ServiceAccount` to interact with the Kubernetes API server and other services securely. Each pod inherits the permissions of the `ServiceAccount` it's associated with.
+
+To create a YAML file using the `vi` editor, add the `ServiceAccount` definition, and then apply it using `kubectl`, follow these steps:
+
+### Step-by-Step Instructions
+
+1. **Open `vi` editor to create a new file:**
+
+   ```bash
+   vi batman.yml
+   ```
+![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/017edfa5-9076-4246-949e-01701d24f34d)
+
+2. **Add the `ServiceAccount` definition to the file:**
+
+   Press `i` to enter insert mode and paste the following content:
+
+   ```yaml
+   apiVersion: v1
+   kind: ServiceAccount
+   metadata:
+     name: jenkins
+     namespace: webapps
+   ```
+
+3. **Save and exit the `vi` editor:**
+
+   - Press `Esc` to exit insert mode.
+   - Type `:wq` and press `Enter` to save and quit `vi`.
+
+4. **Create the namespace if it doesn't already exist:**
+
+   ```bash
+   kubectl create namespace webapps
+   ```
+
+5. **Apply the YAML file to create the `ServiceAccount`:**
+
+   ```bash
+   kubectl apply -f batman.yml
+   ```
+![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/aed79d1a-903f-4159-9417-112ca8cbbcb7)
+
+### Verification
+
+To verify that the `ServiceAccount` has been created successfully, list the service accounts in the `webapps` namespace:
+
+```bash
+kubectl get serviceaccounts -n webapps
+```
+
+#### Example output:
+
+```
+NAME      SECRETS   AGE
+default   1         10d
+jenkins   1         1m
+```
+
+This output confirms that the `jenkins` `ServiceAccount` has been created in the `webapps` namespace.
+
