@@ -262,35 +262,6 @@ eksctl create nodegroup --cluster=my-eks22 \
                        --appmesh-access \
                        --alb-ingress-access
 ```
-Here's a properly formatted README for your EKS node group creation command:
-
-```markdown
-# EKS Node Group Creation
-
-## Description
-
-This command creates a node group in an Amazon EKS cluster using `eksctl`. It provisions EC2 instances to act as worker nodes in the specified cluster.
-
-## Command
-
-```bash
-eksctl create nodegroup --cluster=my-eks22 \
-                        --region=ap-south-1 \
-                        --name=node2 \
-                        --node-type=t3.medium \
-                        --nodes=3 \
-                        --nodes-min=2 \
-                        --nodes-max=4 \
-                        --node-volume-size=20 \
-                        --ssh-access \
-                        --ssh-public-key=Key \
-                        --managed \
-                        --asg-access \
-                        --external-dns-access \
-                        --full-ecr-access \
-                        --appmesh-access \
-                        --alb-ingress-access
-```
 
 ## Parameters
 
