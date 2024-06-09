@@ -424,3 +424,46 @@ app-rolebinding app-role        1m
 ```
 
 This output confirms that the `app-rolebinding` has been created in the `webapps` namespace and is binding the `app-role` to the `jenkins` ServiceAccount.
+
+The YAML file you provided defines a Kubernetes Secret resource of type `kubernetes.io/service-account-token`. This type of secret is used to store the token associated with a service account, which can then be used for authentication purposes.
+
+# 5. To create a token for service account use below yaml file
+
+Let's break down the components of the YAML file:
+
+```yaml
+apiVersion: v1
+kind: Secret
+type: kubernetes.io/service-account-token
+metadata:
+  name: mysecretname
+  annotations:
+    kubernetes.io/service-account.name: myserviceaccount
+```
+
+### Explanation:
+
+- **apiVersion**: Specifies the version of the Kubernetes API that you are using for this object. Here, it's `v1`, indicating the core version of the Kubernetes API.
+
+- **kind**: Defines the type of Kubernetes resource you are creating. In this case, it's a `Secret`.
+
+- **type**: Specifies the type of the secret. Here, it's `kubernetes.io/service-account-token`, indicating that this secret is used to store a service account token.
+
+- **metadata**: Provides standard metadata about the object, such as its name and annotations.
+
+  - **name**: Sets the name of the Secret as `mysecretname`.
+
+  - **annotations**: Additional information about the Secret, in this case, it specifies the service account name associated with this token.
+
+    - **kubernetes.io/service-account.name**: Specifies the name of the service account for which this token is generated. In this example, it's `myserviceaccount`.
+
+### Purpose:
+
+This Secret is typically created automatically by Kubernetes when you create a ServiceAccount. It contains a token that can be used by applications or other services to authenticate themselves to the Kubernetes API server.
+
+
+```bash
+kubectl apply -f service-account-secret.yaml
+```
+
+This will create the Secret named `mysecretname` with the specified annotations.
