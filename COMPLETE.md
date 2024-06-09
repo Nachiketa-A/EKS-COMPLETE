@@ -150,7 +150,67 @@ To set up an EKS (Amazon Elastic Kubernetes Service) account without using the r
    - You can monitor the status in the **Instances** section of the EC2 Dashboard.
 
 
-# Connecting Instance with MobaXterm
+To connect to your new EC2 instance using MobaXterm and resolve the "Network error: Connection timed out" issue, follow these steps:
+
+### Step 1: Add an SSH Inbound Rule to the Security Group
+
+1. **Log in to the AWS Management Console**:
+   - Open the AWS Management Console and log in with your IAM user credentials.
+
+2. **Navigate to EC2**:
+   - In the AWS Management Console, search for and select **EC2** to open the EC2 Dashboard.
+
+3. **Select Your Instance**:
+   - In the EC2 Dashboard, click on **Instances** in the left-hand menu.
+   - Select the instance you named `jenkins`.
+
+4. **Modify the Security Group**:
+   - In the instance details at the bottom, find and click on the **Security groups** link associated with your instance.
+   - This will take you to the Security Groups section.
+
+5. **Add an SSH Rule**:
+   - Select the security group linked to your instance.
+   - Click on the **Inbound rules** tab.
+   - Click on **Edit inbound rules**.
+   - Click **Add rule**.
+     - **Type**: SSH
+     - **Protocol**: TCP
+     - **Port range**: 22
+     - **Source**: Custom (or choose "My IP" to allow access from your IP only)
+     - **Custom IP**: Enter `0.0.0.0/0` to allow all IP addresses (not recommended for production due to security risks) or specify a more restrictive IP range.
+   - Click **Save rules**.
+
+### Step 2: Connect Using MobaXterm
+
+1. **Download and Install MobaXterm**:
+   - If you haven't already, download and install MobaXterm from the official website: [MobaXterm](https://mobaxterm.mobatek.net/).
+
+2. **Open MobaXterm**:
+   - Launch MobaXterm on your computer.
+
+3. **Start a New SSH Session**:
+   - Click on the **Session** icon in the top left corner.
+   - Select **SSH**.
+
+4. **Configure the SSH Session**:
+   - **Remote host**: Enter the public IP address or DNS of your EC2 instance. You can find this in the EC2 instance details under the "Public IPv4 address" or "Public DNS (IPv4)".
+   - **Specify username**: Enter `ubuntu` (the default username for Ubuntu AMIs).
+   - **Port**: 22
+
+5. **Advanced SSH Settings**:
+   - Click on **Advanced SSH settings**.
+   - **Use private key**: Select this option and browse to the location of your `.pem` key file you downloaded earlier (`jenkins-keypair.pem`).
+
+6. **Start the Session**:
+   - Click on **OK** to start the session.
+
+### Troubleshooting
+
+- **Ensure Instance is Running**: Make sure your EC2 instance is in the `running` state.
+- **Check Network Configuration**: Verify that your instance's security group has the correct inbound rules allowing SSH access from your IP.
+- **Correct Key Permissions**: Ensure your private key file (`.pem`) has the correct permissions. It should be readable only by you. You can change the permissions on your local machine by running `chmod 400 jenkins-keypair.pem` in a terminal if you're using a Unix-based system.
+
+By following these steps, you should be able to connect to your EC2 instance using MobaXterm and resolve any network timeout issues related to SSH access.
 
 ![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/4881d1bf-e259-4d2f-8465-1ee496e67a1d)
 
