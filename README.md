@@ -42,7 +42,7 @@ Each of these services is like a small, independent piece of the overall applica
 4. [Installation of EKSCTL](https://github.com/Nachiketa-A/EKS-COMPLETE/blob/main/Step%202.md#4-installation-of-eksctl)
 5. [Creation of EKS Cluster](https://github.com/Nachiketa-A/EKS-COMPLETE/blob/main/Step%202.md#5-creation-of-eks-cluster)
 
-## [Step 3. Configuration of Jenkins]
+## [Step 3. Configuration of Jenkins](https://github.com/Nachiketa-A/EKS-COMPLETE/blob/main/Step%203.md)
 1. [Install OpenJDK 17](https://github.com/Nachiketa-A/EKS-COMPLETE/blob/main/Step%203.md#1-install-openjdk-17)
 2. [Installing Jenkins from the Jenkins Debian repository with the GPG key](https://github.com/Nachiketa-A/EKS-COMPLETE/blob/main/Step%203.md#2-installing-jenkins-from-the-jenkins-debian-repository-with-the-gpg-key)
 3. [Installation of sonarqube using Docker](https://github.com/Nachiketa-A/EKS-COMPLETE/blob/main/Step%203.md#installing-the-mentioned-plugins-in-jenkins)
