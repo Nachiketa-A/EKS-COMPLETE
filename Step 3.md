@@ -62,7 +62,7 @@ Credentials of jenkins
 ![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/ff770f0f-26b0-4092-a309-ebfed77323da)
 
 
-**installation of sonarqube**
+# 3. Installation of sonarqube using Docker
 
 installation of docker
 
