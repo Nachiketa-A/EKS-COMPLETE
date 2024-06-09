@@ -201,3 +201,44 @@ Certainly! Here are the detailed steps for configuring Docker and SonarQube Scan
 5. **Save the Configuration:**
    - Once you've configured both Docker and SonarQube Scanner, scroll down and click "Save" to apply the changes.
 
+
+### SonarQube Server Configuration
+
+### Step 1: Generate SonarQube Token
+
+1. **Access SonarQube Administration:**
+   - Open your SonarQube instance in a web browser.
+   - Log in with an administrator account.
+   - Navigate to `Administration > Security > Users`.
+
+2. **Generate Token:**
+   - Find your user account in the list and click on it.
+   - In the user details, look for a section to generate a token (often found under the "Tokens" tab).
+   - Click on "Generate Token".
+   - Provide a name for the token, such as `Jenkins Token`.
+   - Click "Generate" and copy the generated token. **Make sure to copy it now, as you won't be able to see it again.**
+![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/a79251d0-f192-402d-81a3-014e0fcde940)
+
+
+### Step 2: Add SonarQube Token to Jenkins Credentials
+
+1. **Navigate to Jenkins Credentials:**
+   - Open your Jenkins dashboard.
+   - Click on `Manage Jenkins` from the left-hand side menu.
+   - Select `Manage Credentials`.
+
+2. **Add a New Credential:**
+   - Click on the `(global)` domain to add a new credential globally.
+   - Click on `Add Credentials` on the left-hand menu.
+![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/c5730c06-d3f1-4f0d-b591-53c83e519e71)
+
+3. **Configure the New Credential:**
+   - In the `Kind` dropdown, select `Secret text`.
+   - **Secret:** Paste the SonarQube token you copied earlier.
+   - **ID:** Enter `sonar-token` (or any other ID you prefer, but remember it as you’ll use this ID in your Jenkins configuration).
+   - Optionally, you can provide a description like `SonarQube token for Jenkins`.
+![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/1e992fd4-0079-4102-8f2e-27273acd4926)
+
+4. **Save the Credential:**
+   - Click `OK` to save the credential.
+
