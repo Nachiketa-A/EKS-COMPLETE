@@ -1,3 +1,5 @@
+# Step2. Installation and Configuration of AWS CLI, Kubectl, Eksctl
+
 After connecting to your EC2 instance using MobaXterm, you can execute the following commands to update the package lists, install AWS CLI, and configure it. Here's a detailed step-by-step guide:
 
 # 1. Installation of AWS CLI
