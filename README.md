@@ -34,7 +34,7 @@ Each of these services is like a small, independent piece of the overall applica
 1. [First Create a user in AWS IAM](https://github.com/Nachiketa-A/EKS-COMPLETE/blob/main/Step%201.md#1-first-create-a-user-in-aws-iam-with-any-name)
 2. [Creating an EC2 instance for Jenkins using the AWS Management Console](https://github.com/Nachiketa-A/EKS-COMPLETE/blob/main/Step%201.md#2-creating-an-ec2-instance-for-jenkins-using-the-aws-management-console)
 
-## [Step2. Installation and Configuration of AWS CLI, Kubectl, Eksctl](https://github.com/Nachiketa-A/EKS-COMPLETE/blob/main/Step%202.md)
+## [Step 2. Installation and Configuration of AWS CLI, Kubectl, Eksctl](https://github.com/Nachiketa-A/EKS-COMPLETE/blob/main/Step%202.md)
 
 1. [Installation of AWS CLI](https://github.com/Nachiketa-A/EKS-COMPLETE/blob/main/Step%202.md#1-installation-of-aws-cli)
 2. [Create access keys for your IAM user and configure the AWS](https://github.com/Nachiketa-A/EKS-COMPLETE/blob/main/Step%202.md#2-create-access-keys-for-your-iam-user-and-configure-the-aws)
