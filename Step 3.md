@@ -91,15 +91,15 @@ To set up SonarQube using Docker, you can follow these steps:
 
 After executing these steps, SonarQube should be running and accessible at `http://localhost:9000`. You can then configure it according to your needs and start analyzing code.
 
-command to check container is created or not
+### Command to check container is created or not
 
 ![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/a68323ee-f4e7-4630-9064-11a3cb08b7bc)
 
-To access sonarqube copy te public ip address and open it on port 9000
+Now, To access sonarqube copy te public ip address and open it on port 9000
 
 ![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/2733db19-184d-45f1-84c2-fc6da25cd2d7)
 
-sonarqube credentials
+### Use Default sonarqube credentials (admin )
 
 ![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/1504417b-6bec-4e60-a323-b902809979ab)
 
