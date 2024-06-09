@@ -150,7 +150,7 @@ After installing these plugins, you'll have the necessary tools integrated into 
 ![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/238cdf38-0b7e-44f9-a78b-8d6b6bcf6820)
 
 
-# Configuration of Tools
+# 5. Configuration of Tools
 
 Certainly! Here are the detailed steps for configuring Docker and SonarQube Scanner tools in Jenkins:
 
