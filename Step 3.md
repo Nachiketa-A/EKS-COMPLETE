@@ -17,6 +17,33 @@
 
 # 2. Installing Jenkins from the Jenkins Debian repository with the GPG key
 
+1. **Download Jenkins GPG Key:**
+   This command downloads the Jenkins GPG key and saves it to `/usr/share/keyrings/jenkins-keyring.asc`. GPG keys are used to verify the authenticity of packages.
+   ```bash
+   sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
+   https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+   ```
+
+2. **Add Jenkins Repository to APT Sources:**
+   This command adds the Jenkins Debian repository to the list of APT sources, which allows `apt-get` to find and install Jenkins packages. It uses the downloaded GPG key to verify the repository.
+   ```bash
+   echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]" \
+   https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+   /etc/apt/sources.list.d/jenkins.list > /dev/null
+   ```
+
+3. **Update APT Package Index:**
+   This command updates the local package index to ensure that the latest package information is available.
+   ```bash
+   sudo apt-get update
+   ```
+
+4. **Install Jenkins:**
+   Finally, this command installs Jenkins using `apt-get`.
+   ```bash
+   sudo apt-get install jenkins
+   ```
+
 ![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/f2537ec8-1009-472e-83cb-930844a2b5ba)
 
 To access Jenkins copy te public ip address and open it on port 8080
