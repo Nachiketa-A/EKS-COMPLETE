@@ -241,8 +241,8 @@ click on **SSH**
 
 ![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/b053feed-93c2-4a59-8e96-78e0689f3327)
 
-coneection successfull
 
+By following these steps, you should be able to connect to your EC2 instance using MobaXterm and resolve any network timeout issues related to SSH access.
 
 
 
