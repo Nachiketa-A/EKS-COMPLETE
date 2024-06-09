@@ -150,5 +150,37 @@ After installing these plugins, you'll have the necessary tools integrated into 
 ![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/238cdf38-0b7e-44f9-a78b-8d6b6bcf6820)
 
 
+# Configuration 
+
+For conifuration of Jenkins
+
+Go to **Manage Jenkins**
+
+Click on **Tools**
+
+![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/ac8543a0-43ff-46d0-9cb8-ed709b976c69)
+
+![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/89de3cc7-9b21-4bda-949d-05a3adaed0c4)
+
+Click on **Apply**
+
+To configure Sonarqube server
+
+Go to Sonarqube -> Administartion -> security -> users -> token
+
+![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/a79251d0-f192-402d-81a3-014e0fcde940)
+
+Copy token 
+
+Go to Jenkins -> manage jenkins -> credentials-> system -> global credentials -> add credentials
+
+![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/c5730c06-d3f1-4f0d-b591-53c83e519e71)
+
+To add sonarqube server to the jenkins
+
+MAnage jenkins -> system
+
+![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/1e992fd4-0079-4102-8f2e-27273acd4926)
+
 
 
