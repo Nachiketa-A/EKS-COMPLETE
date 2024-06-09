@@ -104,16 +104,6 @@ Now, To access sonarqube copy te public ip address and open it on port 9000
 ![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/1504417b-6bec-4e60-a323-b902809979ab)
 
 
-After execution of EKS Cluster command
-
-To setup worker node
-
-![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/86429c03-ab6a-4bd6-a187-7b9cb9848f29)
-
-
-![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/0370218a-6a6d-4bbb-9615-9af8a116f2a9)
-
-
 Meanwhhile we will manage jenkins
 
 **Steps**
