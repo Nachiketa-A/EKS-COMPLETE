@@ -134,14 +134,12 @@ To check it is configure or not
 
 # 3. Install kubectl
 
-Sure, here are the step-by-step instructions to install `kubectl` on a Linux machine:
-
 1. **Download `kubectl`:**
    Use `curl` to download the `kubectl` binary from the Amazon EKS S3 bucket. You can do this by running the following command in your terminal:
    ```bash
    curl -o kubectl https://amazon-eks.s3.us-west-2.amazonaws.com/1.19.6/2021-01-05/bin/linux/amd64/kubectl
    ```
-![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/1a8c6dc7-3337-4c82-9212-407ec2d3fb13)
+
 
 2. **Make the downloaded file executable:**
    After downloading `kubectl`, you need to make it executable using the `chmod` command:
@@ -161,12 +159,35 @@ Sure, here are the step-by-step instructions to install `kubectl` on a Linux mac
    kubectl version --short --client
    ```
    This command will print the client version of `kubectl`.
-![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/8ba11cd7-7cf2-4bbb-b366-6946becbb40d)
+![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/1a8c6dc7-3337-4c82-9212-407ec2d3fb13)
 
 After completing these steps, `kubectl` should be successfully installed on your Linux machine, and you can start using it to interact with Kubernetes clusters. 
 
+# 4. Installation of EKSCTL
 
-# 4. Creation of EKS Cluster
+1. **Download `eksctl`:**
+   Use `curl` to download the `eksctl` binary from the GitHub releases page. This command will download the latest version of `eksctl` for your operating system (Linux, MacOS, or Windows) and architecture (amd64 in this case).
+   ```bash
+   curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp
+   ```
+
+2. **Move `eksctl` to a directory in your PATH:**
+   After downloading `eksctl`, move the `eksctl` binary from the `/tmp` directory to a directory that is included in your system's PATH environment variable. This ensures that you can run `eksctl` from any location in your terminal:
+   ```bash
+   sudo mv /tmp/eksctl /usr/local/bin
+   ```
+
+3. **Verify the installation:**
+   To confirm that `eksctl` has been installed correctly, you can check its version by running:
+   ```bash
+   eksctl version
+   ```
+   This command will print the version of `eksctl`.
+![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/8ba11cd7-7cf2-4bbb-b366-6946becbb40d)
+
+After completing these steps, `eksctl` should be successfully installed on your system, and you can start using it to manage Amazon EKS clusters. If you encounter 
+
+# 5. Creation of EKS Cluster
 
 eksctl create cluster --name=my-eks924 \
                       --region=ap-south-1 \
