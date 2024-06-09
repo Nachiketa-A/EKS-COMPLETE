@@ -223,7 +223,7 @@ After execution of EKS Cluster command
 
 ### b. To setup worker node
 The `eksctl utils associate-iam-oidc-provider` command associates the IAM OIDC (OpenID Connect) provider for your Amazon EKS cluster with your AWS account. This association enables Kubernetes service accounts in your cluster to utilize AWS IAM roles for fine-grained access control to AWS services and resources.
-``
+```
 eksctl utils associate-iam-oidc-provider \
     --region ap-south-1 \
     --cluster my-eks22 \
@@ -244,7 +244,7 @@ After running this command, your EKS cluster will be associated with the IAM OID
 ![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/86429c03-ab6a-4bd6-a187-7b9cb9848f29)
 
 ### c. eksctl create nodegroup
-
+```
 eksctl create nodegroup --cluster=my-eks22 \
                        --region=ap-south-1 \
                        --name=node2 \
@@ -261,6 +261,70 @@ eksctl create nodegroup --cluster=my-eks22 \
                        --full-ecr-access \
                        --appmesh-access \
                        --alb-ingress-access
+```
+Here's a properly formatted README for your EKS node group creation command:
+
+```markdown
+# EKS Node Group Creation
+
+## Description
+
+This command creates a node group in an Amazon EKS cluster using `eksctl`. It provisions EC2 instances to act as worker nodes in the specified cluster.
+
+## Command
+
+```bash
+eksctl create nodegroup --cluster=my-eks22 \
+                        --region=ap-south-1 \
+                        --name=node2 \
+                        --node-type=t3.medium \
+                        --nodes=3 \
+                        --nodes-min=2 \
+                        --nodes-max=4 \
+                        --node-volume-size=20 \
+                        --ssh-access \
+                        --ssh-public-key=Key \
+                        --managed \
+                        --asg-access \
+                        --external-dns-access \
+                        --full-ecr-access \
+                        --appmesh-access \
+                        --alb-ingress-access
+```
+
+## Parameters
+
+- `--cluster=my-eks22`: Specifies the name of the Amazon EKS cluster where the node group will be created.
+
+- `--region=ap-south-1`: Specifies the AWS region where the EKS cluster is located.
+
+- `--name=node2`: Specifies the name of the node group.
+
+- `--node-type=t3.medium`: Specifies the instance type for the worker nodes.
+
+- `--nodes=3`: Specifies the initial number of worker nodes to be launched.
+
+- `--nodes-min=2`: Specifies the minimum number of worker nodes allowed in the node group.
+
+- `--nodes-max=4`: Specifies the maximum number of worker nodes allowed in the node group.
+
+- `--node-volume-size=20`: Specifies the size (in GB) of the EBS volume to be attached to each worker node.
+
+- `--ssh-access`: Enables SSH access to the worker nodes.
+
+- `--ssh-public-key=Key`: Specifies the SSH public key to be used for accessing the worker nodes.
+
+- `--managed`: Indicates that the node group will be managed by Amazon EKS.
+
+- `--asg-access`: Grants access to the Auto Scaling Group (ASG) associated with the node group.
+
+- `--external-dns-access`: Grants access to ExternalDNS for managing DNS records.
+
+- `--full-ecr-access`: Grants full access to Amazon ECR (Elastic Container Registry).
+
+- `--appmesh-access`: Grants access to AWS App Mesh.
+
+- `--alb-ingress-access`: Grants access to the ALB (Application Load Balancer) Ingress Controller.
 
 ![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/0370218a-6a6d-4bbb-9615-9af8a116f2a9)
 
