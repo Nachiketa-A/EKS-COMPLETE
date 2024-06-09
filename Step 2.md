@@ -1,23 +1,65 @@
+After connecting to your EC2 instance using MobaXterm, you can execute the following commands to update the package lists, install AWS CLI, and configure it. Here's a detailed step-by-step guide:
+
+### Step-by-Step Instructions
+
+1. **Connect to Your EC2 Instance Using MobaXterm**
+   - Open MobaXterm.
+   - Start a new SSH session with the IP address and username (`ubuntu`).
+   - Use the `.pem` key file for authentication.
+
+2. **Update Package Lists**
+   - Run the following command to update the package lists:
+     ```bash
+     sudo apt update
+     ```
 ![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/6bdfa9ab-7f53-4789-b624-072dcd8745d8)
 
-Command to **install AWSCLI & install Unzip**
+3. **Install AWS CLI**
 
+   - Install the `unzip` package to handle zip files:
+     ```bash
+     sudo apt install unzip
+     ```
+
+   - Download the AWS CLI version 2 bundle:
+     ```bash
+     curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+     ```
+![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/6bdfa9ab-7f53-4789-b624-072dcd8745d8)
+
+   - Unzip the downloaded bundle:
+     ```bash
+     unzip awscliv2.zip
+     ```
 ![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/1ee0355d-de28-4d7c-bff4-ccde222b7d9a)
 
-Command to unzip
-
+   - Install AWS CLI:
+     ```bash
+     sudo ./aws/install
+     ```
 ![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/a4058fab-7aca-4a98-8418-dc3df6f5e6ac)
 
-Command to install AWS
+4. **Configure AWS CLI**
+   - Run the following command to configure AWS CLI:
+     ```bash
+     aws configure
+     ```
 
-
-![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/c8994951-f36e-4ea7-a7f0-638c4797fcf7)
-
-Command to Configure AWS
+   - You will be prompted to enter your AWS access key ID, secret access key, region name, and output format. These credentials are provided by your IAM user.
 
 ![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/1569bea4-3f45-4714-a657-db5e50f6703a)
 
-For access Id 
+### Commands Summary
+
+```bash
+sudo apt update
+sudo apt install unzip
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+```
+
+By following these steps, you will have successfully installed and configured AWS CLI on your EC2 instance
 
 Go to **IAM user**
 
