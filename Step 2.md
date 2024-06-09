@@ -141,6 +141,7 @@ Sure, here are the step-by-step instructions to install `kubectl` on a Linux mac
    ```bash
    curl -o kubectl https://amazon-eks.s3.us-west-2.amazonaws.com/1.19.6/2021-01-05/bin/linux/amd64/kubectl
    ```
+![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/1a8c6dc7-3337-4c82-9212-407ec2d3fb13)
 
 2. **Make the downloaded file executable:**
    After downloading `kubectl`, you need to make it executable using the `chmod` command:
@@ -160,18 +161,12 @@ Sure, here are the step-by-step instructions to install `kubectl` on a Linux mac
    kubectl version --short --client
    ```
    This command will print the client version of `kubectl`.
-
-After completing these steps, `kubectl` should be successfully installed on your Linux machine, and you can start using it to interact with Kubernetes clusters. If you encounter any issues during the installation process, feel free to ask for further assistance!
-
-![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/1a8c6dc7-3337-4c82-9212-407ec2d3fb13)
-
-
-Command to install eksctl
-
 ![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/8ba11cd7-7cf2-4bbb-b366-6946becbb40d)
 
+After completing these steps, `kubectl` should be successfully installed on your Linux machine, and you can start using it to interact with Kubernetes clusters. 
 
-Creation of EKS Cluster
+
+# 4. Creation of EKS Cluster
 
 eksctl create cluster --name=my-eks924 \
                       --region=ap-south-1 \
