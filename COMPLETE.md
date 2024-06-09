@@ -103,11 +103,51 @@ To set up an EKS (Amazon Elastic Kubernetes Service) account without using the r
      - `EKSPolicy`
 ![Policies](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/e51ae215-72c6-4d61-b5d6-2c925c454053)
 
-9. **Sign in with the New User**
-   - Provide the new user with their sign-in URL, username, and password.
-   - The new user can now sign in to the AWS Management Console with the appropriate permissions to manage EKS.
+# 2. Creating an EC2 instance for Jenkins using the AWS Management Console:
 
-By following these steps, you've created a new IAM user with limited access necessary to manage EKS resources, adhering to AWS best practices for security and access control.
+1. **Log in to the AWS Management Console**
+   - Open your web browser and go to the AWS Management Console.
+   - Log in with your IAM user credentials.
+
+2. **Navigate to EC2**
+   - In the AWS Management Console, search for and select **EC2** to open the EC2 Dashboard.
+
+3. **Launch Instance**
+   - Click on the **Launch instance** button.
+
+4. **Configure the Instance**
+   - **Name and tags**:
+     - Add a name: `jenkins`
+   
+   - **Application and OS Images (Amazon Machine Image)**:
+     - Choose **Ubuntu** as the operating system. Select the latest stable version of Ubuntu.
+   
+   - **Instance type**:
+     - Select **t2.xlarge**.
+
+5. **Key Pair (Login)**
+   - **Create a new key pair**:
+     - Click on **Create a new key pair**.
+     - Enter a key pair name (e.g., `jenkins-keypair`).
+     - Select **Key pair type**: RSA
+     - Select **Private key file format**: `.pem` (for use with OpenSSH).
+     - Click **Create key pair**.
+     - The key pair file (`.pem`) will be automatically downloaded. Keep this file safe, as you will need it to SSH into your instance.
+
+6. **Network settings**
+   - Keep the default settings for now unless you have specific VPC and subnet requirements.
+
+7. **Configure storage**
+   - Change the **Size (GiB)** to `30` for the root volume.
+
+8. **Advanced details**
+   - Click on **Launch instance**.
+
+9. **Wait for the Instance to Launch**
+   - It will take a few minutes for the instance to be up and running.
+   - You can monitor the status in the **Instances** section of the EC2 Dashboard.
+
+
 # Connecting Instance with MobaXterm
 
 ![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/4881d1bf-e259-4d2f-8465-1ee496e67a1d)
