@@ -29,7 +29,7 @@ The application consists of 11 separate services (or microservices), each writte
 Each of these services is like a small, independent piece of the overall application. They work together to create the full shopping experience for users but can be developed, deployed, and scaled independently.
 
 
-[Step 1. Creation of user for EKS and Instance for Jenkins](https://github.com/Nachiketa-A/EKS-COMPLETE/blob/main/Step%201.md)
+## [Step 1. Creation of user for EKS and Instance for Jenkins](https://github.com/Nachiketa-A/EKS-COMPLETE/blob/main/Step%201.md)
 
 1. First Create a user in AWS IAM 
 2. Creating an EC2 instance for Jenkins using the AWS Management Console
