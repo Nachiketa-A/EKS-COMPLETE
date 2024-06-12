@@ -4,7 +4,7 @@
 
 #### 1.Navigate to Jenkins Dashboard
 
-Open your Jenkins dashboard in your web browser.
+      - Open your Jenkins dashboard in your web browser.
 
 
 
