@@ -50,13 +50,13 @@ Each of these services is like a small, independent piece of the overall applica
 
 ## [Step 4 Create Service Account, Role & Assign that role, And create a secret for Service Account and geenrate a Token](https://github.com/Nachiketa-A/EKS-COMPLETE/blob/main/Step%204.md#step-4-create-service-account-role--assign-that-role-and-create-a-secret-for-service-account-and-geenrate-a-token)
 
-1. [Open INBOUND TRAFFIC IN ADDITIONAL Security Group]
-2. [Creating Service Account]
-3. [Create a Role]
-4. [Bind the role to service account]
-5. [To create a token for service account use below yaml file]
+1. [Open INBOUND TRAFFIC IN ADDITIONAL Security Group](https://github.com/Nachiketa-A/EKS-COMPLETE/blob/main/Step%204.md#1-open-inbound-traffic-in-additional-security-group)
+2. [Creating Service Account](https://github.com/Nachiketa-A/EKS-COMPLETE/blob/main/Step%204.md#2-creating-service-account)
+3. [Create a Role](https://github.com/Nachiketa-A/EKS-COMPLETE/blob/main/Step%204.md#3-create-a-role)
+4. [Bind the role to service account](https://github.com/Nachiketa-A/EKS-COMPLETE/blob/main/Step%204.md#4-bind-the-role-to-service-account)
+5. [To create a token for service account use below yaml file](https://github.com/Nachiketa-A/EKS-COMPLETE/blob/main/Step%204.md#5-to-create-a-token-for-service-account-use-below-yaml-file)
 
-## [Step 5 Jenkins Pipeline Creation ]
+## [Step 5 Jenkins Pipeline Creation ](https://github.com/Nachiketa-A/EKS-COMPLETE/blob/main/Step%205.md#jenkins-pipeline-creation)
 
 1. [New Pipeline Creation](https://github.com/Nachiketa-A/EKS-COMPLETE/blob/main/Step%205.md#steps-to-create-a-new-pipeline)
 2. [Pipeline Script Creation](https://github.com/Nachiketa-A/EKS-COMPLETE/blob/main/Step%205.md#pipeline-script)
