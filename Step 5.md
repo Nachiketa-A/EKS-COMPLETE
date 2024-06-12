@@ -227,3 +227,6 @@ pipeline {
 }
 ```
 
+**Command to create Kubernetes token**
+
+
