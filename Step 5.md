@@ -232,3 +232,23 @@ pipeline {
 ```bash
 kubectl describe secret mysecretname -n webapps
 ```
+
+![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/b9c93e21-5f95-4ff8-a68f-9d416439ff13)
+
+After generatin of this token we need to save the token with particular name **eg:k8-token**.
+
+## Configuration for token
+
+![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/e537b330-f461-432c-a4d8-10cbc88bb11a)
+
+After completing all the configurations now we are ready to run our Pipeline
+
+## Build and Verify the Pipeline
+
+### 1. Build the Pipeline
+- Click on **"Build Now"** to trigger the pipeline build.
+
+### 2. Check the Console Output
+- Navigate to **"Console Output"** to review the build process and verify the output.
+
+ 
