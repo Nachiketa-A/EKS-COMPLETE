@@ -20,7 +20,9 @@ Open your Jenkins dashboard in your web browser.
 - Click the **"OK"** button to proceed.
 
 ### 6. Configure the Pipeline
-- Configure your pipeline as needed and save your changes.
+- Configure your pipeline.
+
+![image](https://github.com/Nachiketa-A/Microservice_App/assets/157089767/d764b10a-5696-43b1-835d-0136fb4e6ded)
 
 ## Additional Configuration
 
