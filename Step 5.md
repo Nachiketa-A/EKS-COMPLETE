@@ -243,7 +243,7 @@ After generatin of this token we need to save the token with particular name **e
 
 After completing all the configurations now we are ready to run our Pipeline
 
-## Build and Verify the Pipeline(https://github.com/Nachiketa-A/EKS-COMPLETE/blob/main/Step%205.md#build-and-verify-the-pipeline)
+**Build and Verify the Pipeline**(https://github.com/Nachiketa-A/EKS-COMPLETE/blob/main/Step%205.md#build-and-verify-the-pipeline)
 
 ### 1. Build the Pipeline
 - Click on **"Build Now"** to trigger the pipeline build.
