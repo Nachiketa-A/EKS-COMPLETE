@@ -55,3 +55,9 @@ Each of these services is like a small, independent piece of the overall applica
 3. [Create a Role]
 4. [Bind the role to service account]
 5. [To create a token for service account use below yaml file]
+
+## [Step 5 Jenkins Pipeline Creation ]
+
+1. [New Pipeline Creation](https://github.com/Nachiketa-A/EKS-COMPLETE/blob/main/Step%205.md#steps-to-create-a-new-pipeline)
+2. [Pipeline Script Creation](https://github.com/Nachiketa-A/EKS-COMPLETE/blob/main/Step%205.md#pipeline-script)
+3. [Build and verify the Ppipeline](https://github.com/Nachiketa-A/EKS-COMPLETE/blob/main/Step%205.md#build-and-verify-the-pipeline)
