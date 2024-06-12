@@ -61,9 +61,9 @@ pipeline {
                 script{
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
                           dir('/var/lib/jenkins/workspace/10-Tier/src/adservice/') {
-                                 sh "docker build -t adijaiswal/adservice:latest ."
-                                 sh "docker push adijaiswal/adservice:latest"
-								 sh " docker rmi adijaiswal/adservice:latest"
+                                 sh "docker build -t nachia2024/adservice:latest ."
+                                 sh "docker push nachia2024/adservice:latest"
+				 sh " docker rmi nachia2024/adservice:latest"
                         }
                     }
                 }
@@ -75,9 +75,9 @@ pipeline {
                 script{
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
                           dir('/var/lib/jenkins/workspace/10-Tier/src/cartservice/src/') {
-                                 sh "docker build -t adijaiswal/cartservice:latest ."
-                                 sh "docker push adijaiswal/cartservice:latest"
-								 sh " docker rmi adijaiswal/cartservice:latest"
+                                 sh "docker build -t nachia2024/cartservice:latest ."
+                                 sh "docker push nachia2024/cartservice:latest"
+				 sh " docker rmi nachia2024/cartservice:latest"
                         }
                     }
                 }
@@ -89,9 +89,9 @@ pipeline {
                 script{
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
                           dir('/var/lib/jenkins/workspace/10-Tier/src/checkoutservice/') {
-                                 sh "docker build -t adijaiswal/checkoutservice:latest ."
-                                 sh "docker push adijaiswal/checkoutservice:latest"
-								 sh " docker rmi adijaiswal/checkoutservice:latest"
+                                 sh "docker build -t nachia2024/checkoutservice:latest ."
+                                 sh "docker push nachia2024/checkoutservice:latest"
+				 sh " docker rmi nachia2024/checkoutservice:latest"
                         }
                     }
                 }
@@ -103,9 +103,9 @@ pipeline {
                 script{
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
                           dir('/var/lib/jenkins/workspace/10-Tier/src/currencyservice/') {
-                                 sh "docker build -t adijaiswal/currencyservice:latest ."
-                                 sh "docker push adijaiswal/currencyservice:latest"
-								 sh " docker rmi adijaiswal/currencyservice:latest"
+                                 sh "docker build -t nachia2024/currencyservice:latest ."
+                                 sh "docker push nachia2024/currencyservice:latest"
+				 sh " docker rmi nachia2024/currencyservice:latest"
                         }
                     }
                 }
@@ -117,9 +117,9 @@ pipeline {
                 script{
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
                           dir('/var/lib/jenkins/workspace/10-Tier/src/emailservice/') {
-                                 sh "docker build -t adijaiswal/emailservice:latest ."
-                                 sh "docker push adijaiswal/emailservice:latest"
-								 sh " docker rmi adijaiswal/emailservice:latest"
+                                 sh "docker build -t nachia2024/emailservice:latest ."
+                                 sh "docker push nachia2024/emailservice:latest"
+				 sh " docker rmi nachia2024/emailservice:latest"
                         }
                     }
                 }
@@ -131,9 +131,9 @@ pipeline {
                 script{
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
                           dir('/var/lib/jenkins/workspace/10-Tier/src/frontend/') {
-                                 sh "docker build -t adijaiswal/frontend:latest ."
-                                 sh "docker push adijaiswal/frontend:latest"
-								 sh " docker rmi adijaiswal/frontend:latest"
+                                 sh "docker build -t nachia2024/frontend:latest ."
+                                 sh "docker push nachia2024/frontend:latest"
+				 sh " docker rmi nachia2024/frontend:latest"
                         }
                     }
                 }
@@ -145,9 +145,9 @@ pipeline {
                 script{
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
                           dir('/var/lib/jenkins/workspace/10-Tier/src/loadgenerator/') {
-                                 sh "docker build -t adijaiswal/loadgenerator:latest ."
-                                 sh "docker push adijaiswal/loadgenerator:latest"
-								 sh " docker rmi adijaiswal/loadgenerator:latest"
+                                 sh "docker build -t nachia2024/loadgenerator:latest ."
+                                 sh "docker push nachia2024/loadgenerator:latest"
+				 sh " docker rmi nachia2024/loadgenerator:latest"
                         }
                     }
                 }
@@ -159,9 +159,9 @@ pipeline {
                 script{
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
                           dir('/var/lib/jenkins/workspace/10-Tier/src/paymentservice/') {
-                                 sh "docker build -t adijaiswal/paymentservice:latest ."
-                                 sh "docker push adijaiswal/paymentservice:latest"
-								  sh " docker rmi adijaiswal/paymentservice:latest"
+                                 sh "docker build -t nachia2024/paymentservice:latest ."
+                                 sh "docker push nachia2024/paymentservice:latest"
+				 sh " docker rmi nachia2024/paymentservice:latest"
                         }
                     }
                 }
@@ -173,9 +173,9 @@ pipeline {
                 script{
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
                           dir('/var/lib/jenkins/workspace/10-Tier/src/productcatalogservice/') {
-                                 sh "docker build -t adijaiswal/productcatalogservice:latest ."
-                                 sh "docker push adijaiswal/productcatalogservice:latest"
-								 sh " docker rmi adijaiswal/productcatalogservice:latest"
+                                 sh "docker build -t nachia2024/productcatalogservice:latest ."
+                                 sh "docker push nachia2024/productcatalogservice:latest"
+				 sh " docker rmi nachia2024/productcatalogservice:latest"
                         }
                     }
                 }
@@ -187,9 +187,9 @@ pipeline {
                 script{
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
                           dir('/var/lib/jenkins/workspace/10-Tier/src/recommendationservice/') {
-                                 sh "docker build -t adijaiswal/recommendationservice:latest ."
-                                 sh "docker push adijaiswal/recommendationservice:latest"
-								 sh " docker rmi adijaiswal/recommendationservice:latest"
+                                 sh "docker build -t nachia2024/recommendationservice:latest ."
+                                 sh "docker push nachia2024/recommendationservice:latest"
+				 sh " docker rmi nachia2024/recommendationservice:latest"
                         }
                     }
                 }
@@ -201,9 +201,9 @@ pipeline {
                 script{
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
                           dir('/var/lib/jenkins/workspace/10-Tier/src/shippingservice/') {
-                                 sh "docker build -t adijaiswal/shippingservice:latest ."
-                                 sh "docker push adijaiswal/shippingservice:latest"
-								 sh " docker rmi adijaiswal/shippingservice:latest"
+                                 sh "docker build -t nachia2024/shippingservice:latest ."
+                                 sh "docker push nachia2024/shippingservice:latest"
+				 sh " docker rmi nachia2024/shippingservice:latest"
                         }
                     }
                 }
@@ -213,7 +213,7 @@ pipeline {
         
         	stage('K8-Deploy') {
             steps {
-                withKubeConfig(caCertificate: '', clusterName: 'my-eks8', contextName: '', credentialsId: 'k8-token', namespace: 'webapps', restrictKubeConfigAccess: false, serverUrl: 'https://2BCD568E04EC6456125F85067AFE81B9.gr7.ap-south-1.eks.amazonaws.com') {
+                withKubeConfig(caCertificate: '', clusterName: 'my-eks8', contextName: '', credentialsId: 'k8-token', namespace: 'webapps', restrictKubeConfigAccess: false, serverUrl: 'https://2BCD568E04EC6456125F85067AFE81B9.gr7.us-east-1.eks.amazonaws.com') {
                          sh 'kubectl apply -f deployment-service.yml'
                          sh 'kubectl get pods '
                          sh 'kubectl get svc'
