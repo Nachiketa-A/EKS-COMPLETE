@@ -229,4 +229,6 @@ pipeline {
 
 **Command to create Kubernetes token**
 
-
+```bash
+kubectl describe secret mysecretname -n webapps
+```
