@@ -251,15 +251,4 @@ After completing all the configurations now we are ready to run our Pipeline
 ### 2. Check the Console Output
 - Navigate to **"Console Output"** to review the build process and verify the output.
 
-### Stage Output
-
-![image](https://github.com/Nachiketa-A/EKS-COMPLETE/assets/157089767/88c36b0d-0ce9-464e-bbe4-79f13d642736)
-
-
-![image](https://github.com/Nachiketa-A/EKS-COMPLETE/assets/157089767/61f90e86-89f5-426d-9a52-a332b832a9ee)
-
-![image](https://github.com/Nachiketa-A/EKS-COMPLETE/assets/157089767/dc7e5d08-2367-4fae-8d0b-2bbc18bf33bc)
-
-![image](https://github.com/Nachiketa-A/EKS-COMPLETE/assets/157089767/e4690b67-b334-4d01-8e5f-861cc03d2731)
-
 
